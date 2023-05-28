@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+progress {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 3px;
+  margin: 0;
+  color: var(--progress-primary);
+  background-color: var(--progress-background);
+  border: none
+}
+
+progress[value]::-webkit-progress-bar {
+  background-color: var(--progress-background)
+}
+
+progress[value]::-moz-progress-bar,progress[value]::-webkit-progress-value {
+  background-color: var(--progress-primary);
+  transition: width .45s ease
+}
+
+#app {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#app,
+body,
+html {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
